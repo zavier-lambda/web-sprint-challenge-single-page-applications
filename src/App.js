@@ -103,11 +103,11 @@ function App() {
       }
     })
   }
-  useEffect(() => {
-    formSchema.isValid(formValues).then(valid => {
-      setDisabled(!valid)
-    })
-  }, [formValues])
+  // useEffect(() => {
+  //   formSchema.isValid(formValues).then(valid => {
+  //     setDisabled(!valid)
+  //   })
+  // }, [formValues])
   return (
     <>
       <NavBar/>

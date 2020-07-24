@@ -1,8 +1,14 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import Topping from './Topping'
 
 
 export default function OrderComplete({pizza}) {
+  let topper = []
   const topp = Object.keys(pizza.toppings)
+
+useEffect(() => {
+
+}, [])
 
 
   return(
@@ -11,15 +17,15 @@ export default function OrderComplete({pizza}) {
       <div>{pizza.size}</div>
       <div>{pizza.special}</div>
       <div>
-        {topp.forEach(top => {
-          if (pizza.toppings[top] === true) {
-            debugger
-            return(
-              <div>{top}</div>
-            )
-          }
-          
-        })}
+{
+    topp.map(top => {
+      debugger
+      if (pizza.toppings[top] == true) {
+      return (<div>{top}</div>)
+      }
+      
+    })
+}
       </div>
     </div>
   )

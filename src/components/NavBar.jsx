@@ -16,7 +16,7 @@ export default function NavBar() {
         <h1>Zavier's Pizza</h1>
         <div>
           <Link to='/'>Home</Link>
-          <Link to='/pizza'>Order Now</Link>
+          <Link to='/pizza' id="order">Order Now</Link>
         </div>
     </Nav>
   )

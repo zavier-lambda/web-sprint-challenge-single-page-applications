@@ -86,6 +86,7 @@ export default function PizzaBuilder({values, disabled, errors, inputChange, che
           <label>
             <input
               type='radio'
+              id="OR"
               name='sauce'
               value='Original Red'
               checked={values.sauce === 'Original Red'}
@@ -180,13 +181,13 @@ export default function PizzaBuilder({values, disabled, errors, inputChange, che
           className="textbox"
           type='text'
           name='special'
-        value={values.special}
-        onChange={onInputChange}
+          value={values.special}
+          onChange={onInputChange}
         />
 
         <div>
         <input type="number" min="1" max="100" value={values.amount}></input>
-          <button>Place Order</button> {/*<button id='submitButton' disabled={disabled} >Submit</button>*/}
+          <button id="btn" disabled={disabled}>Place Order</button> {/*<button id='submitButton' disabled={disabled} >Submit</button>*/}
         </div>
 
       <div class="error-cont">
